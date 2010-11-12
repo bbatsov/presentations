@@ -53,6 +53,7 @@
 \setbeamertemplate{footline}[text line]{} % makes the footer EMPTY
 
 % include packages
+\usepackage{helvet}
 \usepackage[utf8]{inputenc}
 \usepackage[english,bulgarian]{babel}
 \usepackage[T2A]{fontenc}
@@ -140,23 +141,195 @@
 
 \begin{frame}{Платформата Java}
   \transdissolve
-  \begin{itemize}
-  \item 
-  \end{itemize}
+  \includegraphics[height=200px, width=320px]{images/JavaPlatform.png}
 \end{frame}
 
-\begin{frame}{Развитието на Java}
+\begin{frame}{Езикът Java}
   \transdissolve
-  \begin{itemize}
-  \item 
-  \end{itemize}
+  \begin{columns}
+    \column{.5\textwidth}
+    Column Number 1
+    \begin{itemize}
+      \item one
+      \item two
+      \item three
+    \end{itemize}
+    \column{.5\textwidth}
+    Column Number 2
+    \begin{itemize}
+      \item one
+      \item two
+      \item three
+    \end{itemize}
+
+  \end{columns}
 \end{frame}
 
 \section{Groovy}
 \subsection{Основни характеристики на Groovy}
 \subsection{Groovy в действие}
 
-\begin{frame}{Groovy}
+\begin{frame}{Groovy е...}
+  \transdissolve
+  \begin{itemize}
+  \item Динамичен език за JVM
+    \begin{itemize}
+      \item Програмите на Groovy директно се компилират до байт код
+    \end{itemize}
+
+  \item Вдъхновен от езици като Ruby, Python и Smalltalk
+  \item Създаден за да улесни живота на (Java) програмистите
+  \item Проект с отворен код, лицензиран под Apache Public License
+  \item С граматика директно извлечена от Java 5
+    \begin{itemize}
+      \item поддържа анотации, generics, изброени типове(enums),
+        статични импорти и т.н.
+    \end{itemize}
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Ключови характеристики}
+  \transdissolve
+  \begin{itemize}
+  \item Напълно обектно-ориентиран
+  \item Типизирането не е задължително
+  \item Няма нужда да чакате Java 7/8/9:
+    \begin{itemize}
+      \item Closures - преизползваеми / присвоими блокове код
+      \item Атрибути - автоматично генерирани getter/setter методи
+    \end{itemize}
+  \item Duck typing - типът на обектите се определя от техния
+    интерфейс, а не от техния клас
+  \item Аритметика базирана на BigDecimal
+  \item Улеснена работа с SQL, XML, Swing и т.н.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Java интеграция}
+  \transdissolve
+  \begin{itemize}
+  \item Groovy генерира Java байткод за JVM
+    \begin{itemize}
+      \item Същите низове, регулярни изрази и т.н.
+      \item Същите API
+      \item Същия модел на сигурност, същия нишков модел
+      \item Същите ОО концепции
+      \item Комбинирана компилация
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Инсталация}
+  \transdissolve
+  \begin{itemize}
+  \item Идете на http://groovy.codehaus.org
+  \item Изтеглете Groovy 1.7
+  \item Разархивирайте и установете променливата GROOVY\_HOME
+  \item Добавете GROOVY\_HOME/bin в пътя ви
+  \item Това е 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Инструменти}
+  \transdissolve
+  \begin{itemize}
+  \item 
+  \end{itemize}
+\end{frame}
+
+
+\subsection{Синтаксис на Groovy}
+\begin{frame}[fragile]
+  \frametitle{Java програма}
+  \transdissolve
+\begin{lstlisting}
+  
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Groovy програма}
+  \transdissolve
+\begin{lstlisting}
+  
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{Синтактични конструкции}
+  \transdissolve
+  \begin{itemize}
+  \item Списъци(lists)
+    \begin{itemize}
+    \item def numbers = [1, 2, 3]      
+    \end{itemize}
+  \item Асоциативни масиви(maps)
+    \begin{itemize}
+    \item def map = [BG: "`Bulgaria", DE: "`Germany"]      
+    \end{itemize}
+  \item Обхват(range)
+    \begin{itemize}
+      \item def range = 1..1000
+    \end{itemize}
+  \item Регулярни изрази
+    \begin{itemize}
+      \item def whitespace = ~/\\s+/
+    \end{itemize}
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Groovy низове}
+  \transdissolve
+  \begin{itemize}
+  \item GStrings - интерполирани низове
+  \item Многоредови низове
+  \item Специален синтаксис
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Closures}
+  \transdissolve
+  \begin{itemize}
+  \item Преизползваем / присвоим блок код
+  \item 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Удобства}
+  \transdissolve
+  \begin{itemize}
+  \item 
+  \end{itemize}
+\end{frame}
+
+\subsection{Интересни Groovy API}
+\begin{frame}{Groovy Dev Kit(GDK)}
+  \transdissolve
+  \begin{itemize}
+  \item Groovy "`декорира" съществуващите JDK API
+  \begin{itemize}
+    \item Не можем да разширим java.lang.String или java.io.File?
+  \end{itemize}
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{JDBC}
+  \transdissolve
+  \begin{itemize}
+  \item 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{XML}
+  \transdissolve
+  \begin{itemize}
+  \item 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Swing}
   \transdissolve
   \begin{itemize}
   \item 
